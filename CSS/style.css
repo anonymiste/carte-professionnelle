@@ -9,8 +9,7 @@ body {
     margin: 30px 80px;
     height: 100vh;
     display: flex;
-    justify-content: center;
-
+   justify-content: center;
 }
 
 .container {
@@ -19,16 +18,15 @@ body {
 
 .carte {
     width: 360px;
-    height: 530px;
-    transform-style: preserve-3d;
-    transition: trarform 8s ease-in-out;
+    height: 530px;    transform-style: preserve-3d;
     cursor: pointer;
     border: 1px solid goldenrod;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
-    5px 5px 10px rgba(0, 0, 0, 0.05);
+    -5px -5px 10px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     transform: rotateY(0deg);
-    transition: transform 1s ease-in-out;
+    transition: transform 5s ease-in-out;
+    /* transition: transform 1s ease-in-out; */
 }
 
 .carte:hover {
@@ -50,7 +48,7 @@ body {
 .front-info {
     position: absolute;
     bottom: 10px;
-    left: 20%;
+    left: 15%;
     color: #FFD700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -99,12 +97,12 @@ body {
 .card-btn {
     background: #ffd700;
     color: #0B0B0B;
-    padding: 12px 14px;
+    padding: 10px 14px;
     font-size: 1rem;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .card-btn:hover {
     background: #C0C0C0; 
