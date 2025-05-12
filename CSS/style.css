@@ -18,30 +18,42 @@ body {
 
 .carte {
     width: 360px;
-    height: 530px;    transform-style: preserve-3d;
+    height: 530px;
+    transform-style: preserve-3d;
     cursor: pointer;
     border: 1px solid goldenrod;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
     -5px -5px 10px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
-    -webkit-transform: rotateY(0deg);
+    /* -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     transition: -webkit-transform 5s ease-in-out,
-    transform 5s ease-in-out;
+    transform 5s ease-in-out; */
+    transition: 1s ease-in-out;
 }
 
-.carte:hover {
+/* .carte:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: -webkit-transform 1s ease-in-out,
+    transform 1s ease-in-out;
+} */
+
+.carte.turn {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     transition: -webkit-transform 1s ease-in-out,
     transform 1s ease-in-out;
 }
+
+
 .front-page, .back-page {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: 15px;
+    
 }
 
 .front-page {
@@ -77,6 +89,7 @@ body {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
 }
 
 .back-info {
@@ -112,4 +125,18 @@ body {
     background: #C0C0C0; 
     color: #ffd700;
     border: 2px solid #ffd700;
+}
+
+.bottom-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.turn-btn {
+    background: #0B0B0B;
+    color: #FFD700;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius:  25px;
 }

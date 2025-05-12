@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Carte Professionnelle</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <script defer>
+        function turncard() {
+            const carte = document.getElementById("carte");
+            carte.classList.toggle("turn");
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <div class="carte">
-            <div class="front-page">
+        <div class="carte" id="carte">
+            <div class="front-page" id="front-page">
                 <div class="front-info">
                     <h2 class="mon-nom">ALASSANE  PAUL</h2>
                     <p class="mon-titre">Dev web/mobile</p>
                 </div>
+                    
             </div>
 
-            <div class="back-page">
+            <div class="back-page" id="back-page">
                 <div class="back-info">
                     <h3>ALASSANE PAUL</h3>
                     <p class="mon-boulot">Je crée et programme des applications ou 
@@ -30,6 +37,12 @@
                 </div>
             </div>
                 
+        </div>
+
+        <div class="bottom-btn">
+                    <button class="turn-btn" onclick="turncard()">
+                        retourner la carte
+                    </button>
         </div>
     </div>
 </body>
